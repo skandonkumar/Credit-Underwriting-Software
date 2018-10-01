@@ -64,7 +64,7 @@ CREDIT STANDARDS CRITERIA
                                               EBITDA
  
 	Financial Leverage = total liabilities (including new debt)
-                                                 Tangible Net Worth
+                                                 Tangible Net Worth.
  
  
  
