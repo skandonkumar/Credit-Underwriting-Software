@@ -1,17 +1,27 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const passport = require('passport');
-const keys = require('./config/keys');
-const cookieSession = require('cookie-session');
-const bodyParser = require('body-parser');
-const LocalStrategy = require('passport-local').Strategy;
-require('./models/User');
 
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const bodyParser = require('body-parser');
+// const cors = require("cors");
+const keys = require('./config/keys');
 const app = express();
+require('./models/User');
+require('./services/passport');
 
 const URL = keys.mongoURI;
 mongoose.connect(URL, { useNewUrlParser: true });
+
 app.use(bodyParser.json());
+
+// app.use(
+//     cors({
+//         origin : "http://localhost:3000",
+//         methods:["GET","HEAD","POST","DELETE","PUT","PATCH","OPTIONS"],
+//         credentials:true
+//     })
+// );
 
 app.use(
     cookieSession({
@@ -36,3 +46,7 @@ if (process.env.NODE_ENV === 'production'){
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
+
+app.get("/",(req,res)=>{
+    res.send({hi:"there"})
+})

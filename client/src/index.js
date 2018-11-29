@@ -12,5 +12,6 @@ import reducers from './reducers';
 const store = createStore(reducers,{},applyMiddleware(reduxThunk)) //First Argument is all the reducers in the application, second argument is initial state, third argument is middleware to send response from server to all reducers
 
 ReactDOM.render(
-    <Provider store={store}><App/></Provider>, document.querySelector('#root')
-)
+    <Provider store={store}><App/></Provider>,
+    document.querySelector('#root')
+);

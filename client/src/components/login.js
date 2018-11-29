@@ -2,30 +2,22 @@ import React from 'react';
 import axios from 'axios';
 import FadeTransition from "../helpers/fadeTransition";
 import '../helpers/login.scss'
-// const Login = () =>{
-//     return(
-//         <div>Login Form</div>
-//     )
-// }
-//
-// export default Login;
 
 export default class MainLoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             isLoginOpen: true,
-            isRegisterOpen: false,
-            isChairpersonOpen: false
+            isRegisterOpen: false
         };
     }
 
     showLoginBox() {
-        this.setState({isLoginOpen: true, isRegisterOpen: false, isChairpersonOpen: false});
+        this.setState({isLoginOpen: true, isRegisterOpen: false});
     }
 
     showRegisterBox() {
-        this.setState({isRegisterOpen: true, isLoginOpen: false, isChairpersonOpen: false});
+        this.setState({isRegisterOpen: true, isLoginOpen: false});
     }
 
     render() {
@@ -167,13 +159,20 @@ class RegisterBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            firstname: "",
+            lastname: "",
             username: "",
             password: "",
-            email: "",
-            user_data: "",
-            errors: "",
-            success: false
+            email: ""
         };
+    }
+
+    onFirstnameChange(e) {
+        this.setState({firstname: e.target.value});
+    }
+
+    onLastnameChange(e) {
+        this.setState({lastname: e.target.value});
     }
 
     onUsernameChange(e) {
@@ -185,7 +184,7 @@ class RegisterBox extends React.Component {
     }
 
     onEmailChange(e) {
-        this.setState({address: e.target.value});
+        this.setState({email: e.target.value});
     }
 
     submitRegister(e) {
@@ -214,6 +213,32 @@ class RegisterBox extends React.Component {
                     Register
                 </div>
                 <div className="box">
+
+                    <div className="input-group">
+                        <label htmlFor="username">First Name</label>
+                        <input
+                            id="firstname"
+                            type="text"
+                            name="firstname"
+                            className="login-input"
+                            placeholder="Firstname"
+                            onChange={this
+                                .onFirstnameChange
+                                .bind(this)}/>
+                    </div>
+
+                    <div className="input-group">
+                        <label htmlFor="username">Last Name</label>
+                        <input
+                            id="lastname"
+                            type="text"
+                            name="lastname"
+                            className="login-input"
+                            placeholder="Lastname"
+                            onChange={this
+                                .onLastnameChange
+                                .bind(this)}/>
+                    </div>
 
                     <div className="input-group">
                         <label htmlFor="username">Username</label>
@@ -261,12 +286,6 @@ class RegisterBox extends React.Component {
                             .submitRegister
                             .bind(this)}>Register
                     </button>
-                    <small
-                        className="danger-error">{this.state.errors !== "" && this.state.errors.errors.username ? this.state.errors.errors.username.msg : ""}</small>
-                    <small
-                        className="danger-error">{this.state.errors !== "" && this.state.errors.errors.address ? this.state.errors.errors.address.msg : ""}</small>
-                    <small
-                        className="danger-error">{this.state.errors !== "" && this.state.errors.errors.password ? this.state.errors.errors.password.msg : ""}</small>
                 </div>
             </div>
         );
