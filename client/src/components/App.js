@@ -7,7 +7,7 @@ import InfoPage from './InfoPage';
 import Home from './forms/Home';
 import Financials from './forms/Financials'
 import FormNew from "./forms/FormNew";
-const Footer= () =><footer>Footer</footer>
+import Footer from './Footer'
 const Ratios = () =><h2>Ratios</h2>
 const Summary = () =><h2>Summary</h2>
 
