@@ -19,7 +19,8 @@ class FinancialsForm extends Component{
                 <form onSubmit={this.props.handleSubmit(this.props.onFinancialsSubmit)}>
                     {this.renderFields()}
                     <Link to="/home" className="red btn-flat white-text">Cancel</Link>
-                    <button type="submit" className="teal btn-flat right white-text">Next <i className="material-icons right">done</i> </button>
+                    <button type="submit" className="teal btn-flat right white-text">Next <i className="material-icons right">navigate_next</i> </button>
+                    <input type="reset" className="yellow btn-flat right white-text reset-btn" value="Reset" />
                 </form>
             </div>
         );
