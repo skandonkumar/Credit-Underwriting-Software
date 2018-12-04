@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 
 export default({input, label})=>{
     return(
-        <div>
+        <div className="form-element">
             <label>{label}</label>
-            <input {...input} style={{marginBottom:'5px'}}/>
+            <input {...input} className="form-field" style={{marginBottom:'5px'}}/>
         </div>
     )
 }
