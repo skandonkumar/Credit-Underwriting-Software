@@ -1,20 +1,19 @@
 import React from 'react';
 import {Field} from 'redux-form';
 
-export default({fields, meta, label, values})=>(
+export default(props)=>(
+    <div>
     <ul>
         <table>
             <tbody>
                 <tr>
+                    {/*<td>{props.values.cash}</td>*/}
+                    {/*{console.log(props.values.Cash)}*/}
                     <td>abc</td>
-                    <td>def</td>
-                    <td>ghi</td>
-                    <td>jkl</td>
-                    <td>mno</td>
                 </tr>
             </tbody>
         </table>
     </ul>
-
+    </div>
 )
 

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Field} from 'redux-form';
-
 
 export default({fields, meta, label})=>(
     <ul>
@@ -31,8 +30,8 @@ export default({fields, meta, label})=>(
                 </tr>
             </tbody>
         </table>
-    </ul>
-)
+     </ul>
+ )
 
 const renderYears = ({ input, label, type, fieldName})=>(
     <div>
