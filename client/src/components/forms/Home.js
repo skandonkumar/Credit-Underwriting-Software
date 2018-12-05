@@ -10,10 +10,12 @@ class Home extends Component{
         return(
             <div>
             <Link to = '/form/new' className="waves-effect waves-light btn-large">Create New Form</Link>
-            {/*<Link className="waves-effect waves-light btn-large">Open existing Form</Link>*/}
-            {/*<Link className="waves-effect waves-light btn-large">Export as .xlxs</Link>*/}
-            </div>
-        )
+        <Link to = '/form/update' className= "waves-effect waves-light btn-large"> Update Form </Link>
+        <Link to = '/form/export' className= "waves-effect waves-light btn-large"> Export as XLXS </Link>
+        {/*<Link className="waves-effect waves-light btn-large">Open existing Form</Link>*/}
+        {/*<Link className="waves-effect waves-light btn-large">Export as .xlxs</Link>*/}
+    </div>
+    )
     }
 }
 
