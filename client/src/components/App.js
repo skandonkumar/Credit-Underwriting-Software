@@ -7,6 +7,8 @@ import InfoPage from './InfoPage';
 import Home from './forms/Home';
 import Financials from './forms/Financials'
 import FormNew from "./forms/FormNew";
+import UpdateForm from "./forms/UpdateForm";
+import ExportForm from "./forms/ExportXlxs";
 import Footer from './Footer'
 const Ratios = () =><h2>Ratios</h2>
 const Summary = () =><h2>Summary</h2>
@@ -19,16 +21,18 @@ class App extends Component{
 
     render(){
         return(
-                <BrowserRouter>
-                    <div className="container">
-                        <Header/>
-                        <Route exact path="/" component={InfoPage} />
-                        <Route exact path="/home" component={Home}/>
-                        <Route path="/form/new" component={FormNew}/>
-                        <Footer/>
-                    </div>
-                </BrowserRouter>
-        )
+            <BrowserRouter>
+            <div className="container">
+            <Header/>
+            <Route exact path="/" component={InfoPage} />
+            <Route exact path="/home" component={Home}/>
+            <Route path="/form/new" component={FormNew}/>
+            <Route path ="/form/update" component={UpdateForm} />
+            <Route path ="/form/export" component={ExportForm} />
+            <Footer/>
+        </div>
+        </BrowserRouter>
+    )
     }
 }
 
