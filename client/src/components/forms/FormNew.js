@@ -6,7 +6,6 @@ import {reduxForm} from 'redux-form';
 class FormNew extends Component{
     constructor(props) {
         super(props);
-
         this.state = {
             // financials: false,
             ratios: false,

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Ratios = ({onBack, formValues})=>{
+    console.log(formValues)
     return(
         <div>
             <h5>Ratios form</h5>
