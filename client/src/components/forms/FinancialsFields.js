@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 
-export default({input, label})=>{
+export default(props)=>{
     return(
-        <div className="form-element">
-            <label>{label}</label>
-            <input {...input} className="form-field" style={{marginBottom:'5px'}}/>
+        <div>
+            <label>{props.label}</label>
+            <input {...props.input} style={{marginBottom:'5px'}}/>
         </div>
     )
 }

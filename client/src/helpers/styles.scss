@@ -1,0 +1,155 @@
+* { box-sizing: border-box; }
+body {
+  background-color: #e8ecf8;
+}
+nav {
+  margin-bottom: 20px;
+}
+nav .nav-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nav-wrapper image {
+  display: inline-block;
+  height: 100%;
+  width: 50px;
+}
+
+.nav-wrapper .logo-wrapper {
+  display: inline-block;
+  max-height: 100%;
+  padding: 0 10px;
+}
+
+.nav-wrapper .logo-wrapper img {
+  margin-top: 6px;
+}
+
+nav .brand-logo {
+  position: relative;
+}
+
+.title-wrapper {
+  display: inline-block;
+}
+h1.form-header {
+  background-color: #376b31;
+  color: #ffffff;
+  margin: 0 0 .75rem;
+  font-size: 2rem;
+  text-align: center;
+  padding: .75rem 0;
+}
+form .container {
+  background-color: #ffffff;
+}
+.form-wrap {
+  padding: .75rem 0;
+}
+.form-element {
+  padding: 13px 10px;
+}
+.form-element label {
+  font-size: 1rem;
+  color: initial;
+}
+.form-main {
+  box-shadow: 0 0 15px 2px #888;
+}
+.reset-btn {
+  margin-right: 15px;
+}
+input.form-field {
+  height: 2.2rem;
+}
+//Container
+//.container {
+//  background-color: #bdbdbd;
+//}
+//footer
+footer {
+  background-color: #0d4d02cf;
+  margin-top: 20px;
+  color: #ffffff;
+}
+footer .social-sites a {
+  float: right;
+  display: inline-block;
+}
+.footer-main {
+  padding: 20px 0 12px;
+  margin: 0;
+  font-size: 13px;
+}
+footer .row {
+  margin: 0;
+}
+.left.brand-logo {
+  //color: initial;
+}
+.home-btn{
+  margin: 200px 0;
+}
+.button-wrap{
+  text-align: center;
+}
+.card-panel.teal.lighten-4 li {
+  color: #333;
+}
+.info-page-wrap {
+  margin: 140px 0;
+}
+
+//button CSS
+.animate {
+  background-color: #ffffff !important;
+  //color: $button-color !important;
+  box-shadow: none;
+  position: relative;
+  //border: 2px solid $button-color;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+.animate::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 100%;
+  right: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  transform: translate(50%,-50%) rotate(45deg);
+  top: 50%;
+}
+.animate:hover {
+  color: #ffffff !important;
+}
+.animate:hover::before {
+  height: 400%;
+  //background-color: $button-color;
+}
+
+//Teal Color Button
+.animate.teal {
+  color: #009688 !important;
+  border: 2px solid #009688;
+}
+.animate.teal:hover::before {
+  background-color: #009688;
+}
+.animate.teal:hover {
+  color: #ffffff !important;
+}
+//Red Color Button
+.animate.red {
+  color: #F44336 !important;
+  border: 2px solid #F44336;
+}
+.animate.red:hover::before {
+  background-color: #F44336;
+}
+.animate.red:hover {
+  color: #ffffff !important;
+}
