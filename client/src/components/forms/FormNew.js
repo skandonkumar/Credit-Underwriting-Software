@@ -7,7 +7,7 @@ class FormNew extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            // financials: false,
+            financialsVisited:false,
             ratios: false,
             summary: false
         };
@@ -15,9 +15,15 @@ class FormNew extends Component{
 
     renderContent(){
         if(this.state.ratios === true){
-            return <Ratios onBack={()=>this.setState({ratios:false})}/>;
+            return <Ratios onBack={()=>{
+                this.setState({ratios:false})
+
+            }}/>;
         }
-        return <Financials onFinancialsSubmit={()=>this.setState({ratios:true})}/>;
+        return <Financials visited = {this.state.financialsVisited} onFinancialsSubmit={()=>{
+            this.setState({ratios:true})
+            this.setState({financialsVisited:true})
+        }}/>;
     }
 
     render(){

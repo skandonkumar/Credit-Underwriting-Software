@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {Field} from 'redux-form';
-import onlyAlphs from './Normalizers/onlyAlphs'
 import onlyNums from './Normalizers/onlyNums'
+import {connect} from 'react-redux'
 
 class Years extends Component{
     constructor(props){
         super(props);
-        for (let i=0; i<5; i++){
-            props.fields.push({})
+        if(!props.visited) {
+            for (let i = 0; i < 5; i++) {
+                props.fields.push({})
+            }
         }
     }
 
@@ -40,7 +42,9 @@ class Years extends Component{
         )
     }
 }
+
 export default Years
+
 
 const renderYears = ({ input, label, type, fieldName})=>(
     <div>

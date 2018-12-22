@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import InfoPage from "../InfoPage";
-import {Redirect} from 'react-router-dom';
 
 class Home extends Component{
 

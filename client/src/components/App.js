@@ -7,12 +7,8 @@ import InfoPage from './InfoPage';
 import Home from './forms/Home';
 import UpdateForm from "./forms/UpdateForm";
 import ExportForm from "./forms/ExportXlxs";
-import Financials from './forms/Financials'
 import FormNew from "./forms/FormNew";
 import Footer from './Footer'
-const Ratios = () =><h2>Ratios</h2>
-const Summary = () =><h2>Summary</h2>
-
 
 class App extends Component{
     componentDidMount(){
@@ -36,6 +32,6 @@ class App extends Component{
     }
 }
 
-export default connect(null,actions)(App); //The frst parameter of connect is mapStatetoProps and second argument is action creators
+export default connect(null,actions)(App); //The first parameter of connect is mapStatetoProps and second argument is action creators
                                            //The action creators are connected as props to App component
 

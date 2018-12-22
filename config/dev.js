@@ -1,3 +1,5 @@
+//Contains all the keys for the development version of the project
+
 module.exports = {
     googleClientID:'269412371968-eu6tlr85pcjphcohob4h2sdbre69fpmp.apps.googleusercontent.com',
     googleClientSecret: 'gNczRGxMqiy2iZChLHUCOzWV',

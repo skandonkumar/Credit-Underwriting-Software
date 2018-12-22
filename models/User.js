@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// const bcrypt = require("bcrypt");
 
+//Query to create a new MongoDB schema with the following collections
 const userSchema = new Schema({
     googleId:String
 });
