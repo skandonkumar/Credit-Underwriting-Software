@@ -9,10 +9,10 @@ class Home extends Component{
             <div className="button-wrap">
                 <div className="row">
                     <div className="col s4 m4">
-                        <Link to='/form/new' className="waves-effect waves-light btn-large home-btn">Create New Form</Link>
+                        <Link to='/form/new' className="waves-effect waves-light btn-large home-btn">Create New Document</Link>
                     </div>
                     <div className="col s4 m4">
-                        <Link to='/form/update' className="waves-effect waves-light btn-large home-btn">Update Form</Link>
+                        <Link to='/form/update' className="waves-effect waves-light btn-large home-btn">Update Document</Link>
                     </div>
                     <div className="col s4 m4">
                         <Link to='/form/export' className="waves-effect waves-light btn-large home-btn">Export as Spreadsheet</Link>

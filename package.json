@@ -1,8 +1,3 @@
-//This page defines all the dependencies for the project.
-//The script to begin the project is defined in the scripts section.
-//This project has both a server and client which has to run concurrently. Hence we have setup dev script to start both client and server
-//For the production version of this software, we have setup heroku postbuild script which installs all the node modules to the heroku server which is needed for deployment
-
 {
   "name": "server",
   "version": "1.0.0",

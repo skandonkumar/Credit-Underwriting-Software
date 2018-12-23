@@ -36,7 +36,7 @@ passport.use(new GoogleStrategy({
             //we already have a record with the given profile ID
             return done(null, existingUser);
         }
-        //we don't have a user record with this ID, make new record*/
+        //we don't have a user record with this ID, make new record
         const user = await new User({ googleId: profile.id}).save()
         done(null, user);
     }
